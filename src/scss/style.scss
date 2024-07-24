@@ -1,0 +1,216 @@
+@import "./fonts";
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-inline-size: 375px;
+  max-inline-size: 1280px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc;
+
+  &__logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__menu-button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+  }
+
+  &__menu-button::before {
+    content: "";
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    position: absolute;
+    top: 17px;
+  }
+
+  &__menu-button::after {
+    content: "";
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    position: absolute;
+    bottom: 17px;
+  }
+
+  &__contact-info {
+    font-weight: 500;
+    line-height: 24px;
+    font-size: 14px;
+    color: #d0bc7a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__contact-info-icon {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 272px 1fr;
+  grid-template-rows: 1047px 1fr;
+
+  &__nav {
+    padding: 112px 0 0 80px;
+    border-inline-end: 1px solid #ccc;
+    .nav__list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .nav__item {
+        margin-left: 20px;
+
+        .nav__link {
+          text-decoration: none;
+          text-transform: uppercase;
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+.profile {
+  &__title {
+    font-size: 80px;
+    line-height: 80px;
+    padding: 112px 0 80px 95px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  &__form {
+    padding: 80px 0 80px 95px;
+    &-group {
+      max-width: 400px;
+      margin-block-end: 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      &-item {
+        .profile__label {
+          display: block;
+          margin-bottom: 5px;
+        }
+
+        .profile__input {
+          width: 100%;
+          padding: 8px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        }
+      }
+    }
+
+    .profile__button {
+      display: block;
+      max-width: 231px;
+      margin-block-start: 80px;
+      padding: 10px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+}
+
+.trends {
+  grid-column: 1 / -1;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 200px;
+    text-align: center;
+    margin-bottom: 20px;
+
+    &__image {
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    &__name {
+      margin: 10px 0 5px;
+    }
+
+    &__description {
+      margin: 5px 0;
+    }
+
+    &__price {
+      margin: 5px 0;
+
+      .trends__old-price {
+        text-decoration: line-through;
+        color: #999;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+}

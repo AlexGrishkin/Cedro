@@ -1,0 +1,93 @@
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Профиль</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <img src="./images/logo.svg" alt="Логотип" />
+      </div>
+      <div class="header__menu">
+        <div class="header__contact-info">
+          <img
+            src="./images/phone.svg"
+            class="header__contact-info-icon"
+            alt="иконка телефона"
+          />
+          <span>8 (800) 555-55-55</span>
+        </div>
+        <div>
+          <img src="./images/like.svg" alt="избранное" />
+          <img src="./images/Union.svg" alt="профиль" />
+        </div>
+        <button class="header__menu-button"></button>
+      </div>
+    </header>
+    <main class="main">
+      <nav class="main__nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#" class="nav__link">Профиль</a></li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Мои заказы</a>
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">Выход</a></li>
+        </ul>
+      </nav>
+      <section class="profile">
+        <h1 class="profile__title">ПРОФИЛЬ</h1>
+        <form class="profile__form">
+          <div class="profile__form-group">
+            <div class="profile__form-group-item">
+              <label for="name" class="profile__label">ФИО</label>
+              <input
+                type="text"
+                id="name"
+                class="profile__input"
+                value="Алексеева Ульяна Евгеньевна"
+              />
+            </div>
+            <div class="profile__form-group-item">
+              <label for="email" class="profile__label">Почта</label>
+              <input
+                type="email"
+                id="email"
+                class="profile__input"
+                value="pochta07@mail.ru"
+              />
+            </div>
+            <div class="profile__form-group-item">
+              <label for="phone" class="profile__label">Телефон</label>
+              <input
+                type="tel"
+                id="phone"
+                class="profile__input"
+                value="+7 (999) 999-99-99"
+              />
+            </div>
+          </div>
+          <button type="submit" class="profile__button">
+            Сохранить изменения
+          </button>
+        </form>
+      </section>
+      <section class="trends">
+        <h2 class="trends__title">ТРЕНДЫ СЕЗОНА</h2>
+        <div class="trends__container">
+          <div class="trends__item">
+            <img src="image1.jpg" alt="Product 1" class="trends__image" />
+            <h3 class="trends__name">Brown to Blonde</h3>
+            <p class="trends__description">Оттенок для окрашивания 12 мл</p>
+            <p class="trends__price">
+              1 500 ₽ <span class="trends__old-price">3 000 ₽</span>
+            </p>
+          </div>
+        </div>
+        <a href="#" class="trends__link">Перейти в каталог</a>
+      </section>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
+</html>
